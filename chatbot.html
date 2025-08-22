@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>React Basics</title>
+    <title>Chat Bot</title>
   </head>
   <body>
     <div class="js-container"></div>
@@ -12,19 +12,18 @@
 
     <script src="h ttps://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-
-      const div = 
-        (<div>
-        <button>Hello </button>
-        <p>paragraph of test</p>
-        </div>);
-
-
-      const button = <button>Hello </button> 
-      const paragraph =<p>paragraph of text {2+2}</p>
-
-      
+      //component for the chatinputs
+      function ChatInput(){
+        return (
+          //creating the input bar and the send buttton
+        <div>
     
+          <input></input>
+          <button>Send</button>
+        </div>
+        );
+      }
+
 
 
       const container = document.querySelector('.js-container');
