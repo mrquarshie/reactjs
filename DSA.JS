@@ -4,7 +4,7 @@ var letters =[];        //stack
 var word = "racecar"
 var rword=" ";
 //put letters of words into stack
-for (var i = 0;  i <word.length; i++){
+for (var i = 0;  i < word.length; i++){
         letters.push(word[i]);
 }
 
@@ -15,4 +15,7 @@ for (var i =0; i<word.length; i++){
 
 if (rword ===word){ 
         console.log(word + "is a palindrome.");
+}
+else {
+
 }
