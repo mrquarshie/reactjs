@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Chat Bot</title>
-  </head>
-  <body>
-    <div class="js-container"></div>
-   <script src="react-basics.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Chat Bot</title>
+    <!-- 1. Missing React and ReactDOM scripts -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- 2. Missing Babel script for JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- 3. Missing container element -->
+    <div id="root" class="js-container"></div>
 
-    <script src="https://unpkg.com/supersimpledev/react.js"></script>
-    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
-
-    <script src="h ttps://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      //component for the chatinputs
-      function ChatInput(){
-        return (
-          //creating the input bar and the send buttton
-        <div>
-    
-          <input></input>
-          <button>Send</button>
-        </div>
-        );
-      }  
+        // Component for the chat inputs
+        function ChatInput() {
+            return (
+                // Creating the input bar and the send button
+                <div>
+                    <input placeholder="Type your message..." />
+                    <button>Send</button>
+                </div>
+            );
+        }  
 
-
-
-      const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(div);
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<ChatInput />);
     </script>
-  </body>
+</body>
 </html>
