@@ -17,5 +17,8 @@ if (rword ===word){
         console.log(word + "is a palindrome.");
 }
 else {
+        console.log(word + "is a palindrome")
 
 }
+
+//creating a new stack
