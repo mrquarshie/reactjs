@@ -12,12 +12,15 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
+
+
+
+
       //inputting message in the chatbot
       function ChatInput(){
         return (
             <div>
             <input placeholder ="chat whats up" size="45px">
-                
             </input>
             <button>Send</button>
             </div>
@@ -27,10 +30,11 @@
       }
 
       //chatmessage function
-      function ChatMessage(){
+      function ChatMessage(props){
+            const message= props.message
         return(
             <div>
-             hello chatbot
+             {message}
              <img  src="user.png" width="50px"></img>
             </div>
 
@@ -47,7 +51,7 @@
         <div>
            
             <ChatInput></ChatInput>
-            <ChatMessage></ChatMessage>
+            <ChatMessage message="hello chatbot"></ChatMessage>
         </div>
 
 
