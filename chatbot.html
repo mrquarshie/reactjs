@@ -16,7 +16,9 @@
       function ChatInput(){
         return (
             <div>
-            <input></input>
+            <input placeholder ="chat whats up" size="45px">
+                
+            </input>
             <button>Send</button>
             </div>
         );
@@ -24,9 +26,28 @@
 
       }
 
-      const div =(
+      //chatmessage function
+      function ChatMessage(){
+        return(
+            <>
+             hello chatbot
+             <img  src="user.png"></img>
+            </>
+
+        )
+
+
+      }
+
+
+
+
+
+      const app =(
         <div>
-            {ChatInput()}
+           
+            <ChatInput></ChatInput>
+            <ChatMessage></ChatMessage>
         </div>
 
 
@@ -34,7 +55,7 @@
 
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(div);
+      ReactDOM.createRoot(container).render(app);
     </script>
   </body>
 </html>
