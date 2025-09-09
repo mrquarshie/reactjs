@@ -35,7 +35,7 @@
             //const sender= props.sender;
             //const{message, sender}=props;
 
-
+            /*
             if (sender=== 'robot'){
                 return(
                      <div>
@@ -45,12 +45,12 @@
 
                 );
             }
-
+            */
         return(
             <div>
-              {if sender === "robot"}
+              {sender ==='robot' && <img  src="robot.png" width="50px"></img> }
              {message}
-             <img  src="user.png" width="50px"></img>
+             { sender=== 'user' && <img src="user.png" width="50px"></img>}
             </div>
 
         )
