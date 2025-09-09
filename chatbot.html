@@ -20,7 +20,9 @@
       function ChatInput(){
         return (
             <div>
-            <input placeholder ="chat whats up" size="45px">
+            <input 
+            placeholder ="chat whats up" 
+            size="45px">
             </input>
             <button>Send</button>
             </div>
@@ -48,9 +50,13 @@
             */
         return(
             <div>
-              {sender ==='robot' && <img  src="robot.png" width="50px"></img> }
+              {sender ==='robot' && 
+              (<img  src="robot.png" width="50px">
+              </img>) }
              {message}
-             { sender=== 'user' && <img src="user.png" width="50px"></img>}
+             { sender=== 'user' &&(
+               <img src="user.png" width="50px"></img>
+              )}
             </div>
 
         )
@@ -58,28 +64,32 @@
 
       }
 
-
-
-
-
-      const app =(
-        <div>
+      function App() {
+        return( <div>
            
             <ChatInput></ChatInput>
-            <ChatMessage message="hello chatbot" sender="user"></ChatMessage>
-            <ChatMessage message="Hello! How can i help you" sender="robot"></ChatMessage>
+            <ChatMessage 
+              message="hello chatbot" 
+              sender="user">
+            </ChatMessage>
+            <ChatMessage
+               message="Hello! How can i help you" 
+               sender="robot"></ChatMessage>
             <ChatMessage message="can you get me today's date?" sender="user"></ChatMessage>
             <ChatMessage message="Today is September 27" sender="robot"></ChatMessage>
 
 
-        </div>
+        </div>);
+      }
 
 
-      );
+
+
+    
 
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(app);
+      ReactDOM.createRoot(container).render(<App></App>);
     </script>
   </body>
 </html>
